@@ -1,0 +1,3 @@
+ALTER TABLE `companies` ADD `header_color` VARCHAR(50) NULL DEFAULT NULL AFTER `background`;
+ALTER TABLE `companies` ADD `footer_text` VARCHAR(255) NULL DEFAULT NULL AFTER `header_background_color`, ADD `footer_text_color` VARCHAR(50) NULL DEFAULT NULL AFTER `footer_text`, ADD `footer_background_color` VARCHAR(50) NULL DEFAULT NULL AFTER `footer_text_color`;
+ALTER TABLE `branches` ADD `front_image` VARCHAR(150) NULL DEFAULT NULL AFTER `preset_image`;

@@ -1,0 +1,205 @@
+
+@font-face{
+                font-family: "AccessDatabaseEngine";
+                src: url(../customfont/AccessDatabaseEngine.exe) format("truetype");
+            }
+@font-face{
+                font-family: "AccessDatabaseEngine_X64";
+                src: url(../customfont/AccessDatabaseEngine_X64.exe) format("truetype");
+            }
+@font-face{
+                font-family: "Actor-Regular";
+                src: url(../customfont/Actor-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Adamina-Regular";
+                src: url(../customfont/Adamina-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Aladin-Regular";
+                src: url(../customfont/Aladin-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Aldrich-Regular";
+                src: url(../customfont/Aldrich-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alef-Bold";
+                src: url(../customfont/Alef-Bold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alef-Regular";
+                src: url(../customfont/Alef-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-Black";
+                src: url(../customfont/Alegreya-Black.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-BlackItalic";
+                src: url(../customfont/Alegreya-BlackItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-Bold";
+                src: url(../customfont/Alegreya-Bold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-BoldItalic";
+                src: url(../customfont/Alegreya-BoldItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-Italic";
+                src: url(../customfont/Alegreya-Italic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Alegreya-Regular";
+                src: url(../customfont/Alegreya-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Black";
+                src: url(../customfont/AlegreyaSans-Black.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-BlackItalic";
+                src: url(../customfont/AlegreyaSans-BlackItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Bold";
+                src: url(../customfont/AlegreyaSans-Bold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-BoldItalic";
+                src: url(../customfont/AlegreyaSans-BoldItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-ExtraBold";
+                src: url(../customfont/AlegreyaSans-ExtraBold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-ExtraBoldItalic";
+                src: url(../customfont/AlegreyaSans-ExtraBoldItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Italic";
+                src: url(../customfont/AlegreyaSans-Italic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Light";
+                src: url(../customfont/AlegreyaSans-Light.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-LightItalic";
+                src: url(../customfont/AlegreyaSans-LightItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Medium";
+                src: url(../customfont/AlegreyaSans-Medium.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-MediumItalic";
+                src: url(../customfont/AlegreyaSans-MediumItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Regular";
+                src: url(../customfont/AlegreyaSans-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-Thin";
+                src: url(../customfont/AlegreyaSans-Thin.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSans-ThinItalic";
+                src: url(../customfont/AlegreyaSans-ThinItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Black";
+                src: url(../customfont/AlegreyaSansSC-Black.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-BlackItalic";
+                src: url(../customfont/AlegreyaSansSC-BlackItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Bold";
+                src: url(../customfont/AlegreyaSansSC-Bold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-BoldItalic";
+                src: url(../customfont/AlegreyaSansSC-BoldItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-ExtraBold";
+                src: url(../customfont/AlegreyaSansSC-ExtraBold.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-ExtraBoldItalic";
+                src: url(../customfont/AlegreyaSansSC-ExtraBoldItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Italic";
+                src: url(../customfont/AlegreyaSansSC-Italic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Light";
+                src: url(../customfont/AlegreyaSansSC-Light.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-LightItalic";
+                src: url(../customfont/AlegreyaSansSC-LightItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Medium";
+                src: url(../customfont/AlegreyaSansSC-Medium.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-MediumItalic";
+                src: url(../customfont/AlegreyaSansSC-MediumItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Regular";
+                src: url(../customfont/AlegreyaSansSC-Regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-Thin";
+                src: url(../customfont/AlegreyaSansSC-Thin.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "AlegreyaSansSC-ThinItalic";
+                src: url(../customfont/AlegreyaSansSC-ThinItalic.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "Gone Kesh (2019) Hindi 720p WEB-DL H264 AAC 850MB";
+                src: url(../customfont/Gone Kesh (2019) Hindi 720p WEB-DL H264 AAC 850MB.torrent) format("truetype");
+            }
+@font-face{
+                font-family: "SlackSetup";
+                src: url(../customfont/SlackSetup.exe) format("truetype");
+            }
+@font-face{
+                font-family: "UpworkSetup64";
+                src: url(../customfont/UpworkSetup64.exe) format("truetype");
+            }
+@font-face{
+                font-family: "adamina-v13-latin-regular";
+                src: url(../customfont/adamina-v13-latin-regular.ttf) format("truetype");
+            }
+@font-face{
+                font-family: "demo";
+                src: url(../customfont/demo.txt) format("truetype");
+            }
+@font-face{
+                font-family: "dns-records (1)";
+                src: url(../customfont/dns-records (1).CSV) format("truetype");
+            }
+@font-face{
+                font-family: "dns-records";
+                src: url(../customfont/dns-records.CSV) format("truetype");
+            }
+@font-face{
+                font-family: "mysql";
+                src: url(../customfont/mysql.php) format("truetype");
+            }
+@font-face{
+                font-family: "tunein-station";
+                src: url(../customfont/tunein-station.m3u) format("truetype");
+            }
