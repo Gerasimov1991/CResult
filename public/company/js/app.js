@@ -5274,7 +5274,9 @@ var render = function() {
               attrs: {
                 app: "",
                 height: "60",
-                color: _vm.auth ? _vm.company.header_background_color : ""
+                color: _vm.auth
+                  ? _vm.company.header_background_color
+                  : "#000000"
               }
             },
             [

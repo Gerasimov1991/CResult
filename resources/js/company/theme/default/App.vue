@@ -25,7 +25,7 @@
             <v-btn  class="col_white" text :to="'/'+activeClass+'/add-new-card'" :color="auth?company.header_color:''">Add New</v-btn>
         </v-toolbar-items>
     </v-app-bar>
-    <v-app-bar app height="60" v-else :color="auth?company.header_background_color:''">
+    <v-app-bar app height="60" v-else :color="auth?company.header_background_color:'#000000'">
       <v-toolbar-items>
         <router-link v-if="auth" to="orders"><img :src="logo" height="60" width="80"></router-link>
         <router-link v-else to="/"><img :src="logo" height="60" width="80"></router-link>
