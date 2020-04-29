@@ -2003,7 +2003,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2035,10 +2034,6 @@ __webpack_require__.r(__webpack_exports__);
         title: 'Settings',
         icon: 'settings_applications',
         action: this.settings
-      }, {
-        title: 'ViewOrders',
-        icon: 'settings_applications',
-        action: this.vieworders
       }, {
         title: 'PastOrders',
         icon: 'settings_applications',
@@ -2128,6 +2123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2652,6 +2648,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2834,6 +2831,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -3660,6 +3658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -5578,15 +5577,6 @@ var render = function() {
                         "v-btn",
                         {
                           staticStyle: { color: "#ffffff" },
-                          attrs: { text: "", to: "/backend/vieworders" }
-                        },
-                        [_vm._v("View Orders")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
-                        {
-                          staticStyle: { color: "#ffffff" },
                           attrs: { text: "", to: "/backend/pastorders" }
                         },
                         [_vm._v("Past Orders")]
@@ -5962,6 +5952,37 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c(
+                "v-card-actions",
+                [
+                  _c("div", { staticClass: "flex-grow-1" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "black darken-1", text: "" },
+                      on: { click: _vm.close }
+                    },
+                    [_vm._v("Close")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "red darken-1", text: "" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return _vm.updateBranch($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Save")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
                 "v-card-text",
                 [
                   _c(
@@ -6145,37 +6166,6 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("small", [_vm._v("*indicates required field")])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card-actions",
-                [
-                  _c("div", { staticClass: "flex-grow-1" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: { click: _vm.close }
-                    },
-                    [_vm._v("Close")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          return _vm.updateBranch($event)
-                        }
-                      }
-                    },
-                    [_vm._v("Save")]
-                  )
                 ],
                 1
               )
@@ -6446,6 +6436,37 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c(
+                "v-card-actions",
+                [
+                  _c("div", { staticClass: "flex-grow-1" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "black darken-1", text: "" },
+                      on: { click: _vm.close }
+                    },
+                    [_vm._v("Close")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "red darken-1", text: "" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return _vm.updateCompany($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Save")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
                 "v-card-text",
                 [
                   _c(
@@ -6687,37 +6708,6 @@ var render = function() {
                   _c("small", [_vm._v("*indicates required field")])
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card-actions",
-                [
-                  _c("div", { staticClass: "flex-grow-1" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: { click: _vm.close }
-                    },
-                    [_vm._v("Close")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          return _vm.updateCompany($event)
-                        }
-                      }
-                    },
-                    [_vm._v("Save")]
-                  )
-                ],
-                1
               )
             ],
             1
@@ -6800,6 +6790,42 @@ var render = function() {
                         "v-card",
                         [
                           _c("v-card-title", [_vm._v("Website Setting")]),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticStyle: {
+                                        float: "right",
+                                        "margin-right": "20px"
+                                      },
+                                      attrs: { color: "#ff0000" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.updateSettings($event)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticStyle: { color: "white" } },
+                                        [_vm._v("Save")]
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
                           _vm._v(" "),
                           _c("v-divider"),
                           _vm._v(" "),
@@ -7099,37 +7125,6 @@ var render = function() {
                                                   "max-height": "150"
                                                 }
                                               })
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-row",
-                                    [
-                                      _c(
-                                        "v-col",
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            {
-                                              attrs: {
-                                                color: "primary",
-                                                tile: ""
-                                              },
-                                              on: {
-                                                click: function($event) {
-                                                  $event.preventDefault()
-                                                  return _vm.updateSettings(
-                                                    $event
-                                                  )
-                                                }
-                                              }
-                                            },
-                                            [_vm._v("Save")]
-                                          )
                                         ],
                                         1
                                       )
@@ -7738,7 +7733,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { color: "blue darken-1", text: "" },
+                      attrs: { color: "black darken-1", text: "" },
                       on: { click: _vm.close }
                     },
                     [_vm._v("Close")]
@@ -7747,7 +7742,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { color: "blue darken-1", text: "" },
+                      attrs: { color: "red darken-1", text: "" },
                       on: {
                         click: function($event) {
                           $event.preventDefault()
@@ -8261,6 +8256,37 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c(
+                "v-card-actions",
+                [
+                  _c("div", { staticClass: "flex-grow-1" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "black darken-1", text: "" },
+                      on: { click: _vm.close }
+                    },
+                    [_vm._v("Close")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "red darken-1", text: "" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          return _vm.updateUser($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Save")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
                 "v-card-text",
                 [
                   _c(
@@ -8378,37 +8404,6 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("small", [_vm._v("all are required field")])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card-actions",
-                [
-                  _c("div", { staticClass: "flex-grow-1" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: { click: _vm.close }
-                    },
-                    [_vm._v("Close")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "blue darken-1", text: "" },
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          return _vm.updateUser($event)
-                        }
-                      }
-                    },
-                    [_vm._v("Save")]
-                  )
                 ],
                 1
               )

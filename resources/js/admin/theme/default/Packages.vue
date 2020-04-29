@@ -77,8 +77,8 @@
         </v-card-text>
         <v-card-actions>
           <div class="flex-grow-1"></div>
-          <v-btn color="blue darken-1" text @click="close">Close</v-btn>
-          <v-btn color="blue darken-1" text @click.prevent="updatePackage">Save</v-btn>
+          <v-btn color="black darken-1" text @click="close">Close</v-btn>
+          <v-btn color="red darken-1" text @click.prevent="updatePackage">Save</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

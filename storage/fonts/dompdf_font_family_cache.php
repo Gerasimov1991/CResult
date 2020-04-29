@@ -80,4 +80,13 @@
   'roboto' => array(
     '500' => $fontDir . '/roboto-500_f4a9bd25e4929a6414964bb51d71950f',
   ),
+  'gilroyb' => array(
+    'normal' => $fontDir . '/gilroyb-normal_235b34b6131b415a22ed6bd6501b6a32',
+  ),
+  'gilroye' => array(
+    'normal' => $fontDir . '/gilroye-normal_a1c8b6fd60862768e936de9af08ad22b',
+  ),
+  'gilroyr' => array(
+    'normal' => $fontDir . '/gilroyr-normal_aaaccf548b76a86fa18c6b304f6ec373',
+  ),
 ) ?>

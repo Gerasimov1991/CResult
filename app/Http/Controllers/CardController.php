@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Card;
-// use Mail;
+use Mail;
 use App\Models\Font;
 use Auth;
 use Dompdf\Dompdf;
 use App\Models\Company;
 use PDF;
-use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 class CardController extends Controller
 {
@@ -170,7 +170,7 @@ class CardController extends Controller
         $data['details'] = $card->package->details;
         $data['price'] = number_format($card->package->price,0);
         $pdf = PDF::loadView('proof',$data);       
-       
+        // $pdf->appendView('proofback',$data);
         $pdf = $pdf->output();
         $name = 'proof_'.$card->id.'_'.strtotime("now").'.pdf';
         $card->update(['proof'=>$name]);
@@ -188,23 +188,92 @@ class CardController extends Controller
             'url'=>public_path() .'/pdf/'.$card->proof,
         ];
 
-        Mail::to($card['email'])->send(new SendMail($card));
-        Mail::to("chitanokumar0@gmail.com")->send(new SendMail($card));
+        // $to      = $card['email'];
+        // $subject = 'C Result Print';
+        // $message = '
+        // <!DOCTYPE html>
+        // <html>
+        
+        // <head>
+        //     <meta charset="utf-8">
+        //     <title>C Results</title>
+        //     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+        
+        // </head>
+        
+        // <body style="background:#f1f1f1;padding-top:20px;padding-bottom:20px;">
+        //     <center>
+        //         <table class="" border="0" cellspacing="0" cellpadding="0" width="600"
+        //             style="width:6.25in;background:#ffffff; border-collapse:collapse">
+        //             <tbody>
+        //                 <tr>
+        //                     <td height="10"></td>
+        //                 </tr>
+                       
+        //                 <tr>
+        //                     <td>
+        //                         <p style="color:#000000;font-size:16px;">
+        //                             <b>Card Name:</b><span>'. $card['name'] .'</span>
+        //                         </p>
+        //                     </td>
+        //                 </tr>
+        //                 <tr>
+        //                     <td>
+        //                         <p style="color:#000000;font-size:16px;">
+        //                             <b>Card Title:</b><span>'. $card['title'] .'</span>
+        //                         </p>
+        //                     </td>
+        //                 </tr>
+        //                 <tr>
+        //                     <td>
+        //                         <p style="color:#000000;font-size:16px;">
+        //                             <b>Details:</b><span>'. $card['package_details'] .'</span>
+        //                         </p>
+        //                     </td>
+        //                 </tr>
+        //                 <tr>
+        //                     <td>
+        //                         <p style="color:#000000;font-size:16px;">
+        //                             <b>Price:</b><span>'. $card['package_price'] .'</span>
+        //                         </p>
+        //                     </td>
+        //                 </tr>
+        //                 <tr>
+        //                     <td>
+        //                         <p style="color:#000000;font-size:16px;">
+        //                             <b>Proof:</b><a download href="'. $card['url'] .'">'. $card['url'] .'</a>
+        //                         </p>
+        //                     </td>
+        //                 </tr>
+        //                 <tr>
+        //                     <td height="30"></td>
+        //                 </tr>
+        //             </tbody>
+        //         </table>
+        //     </center>
+        // </body>        
+        // </html>        
+        // ';
+        // $headers = 'From: info@chitano.info' . "\r\n";
+        
+        // mail($to, $subject, $message, $headers);
+        // Mail::to($card['email'])->send(new SendMail($card));
+        // Mail::to("chitanokumar0@gmail.com")->send(new SendMail($card));
         // Mail to customer
-        // Mail::send('mail', $card, function($message) use ($card) {
-        //     $message->to($card['email'], $card['name'],$card['url'])->subject
-        //        ('Order Summary');
+        Mail::send('mail', $card, function($message) use ($card) {
+            $message->to($card['email'], $card['name'],$card['url'])->subject
+               ('Order Summary');
             
-        //     $message->from('info@chitano.info','C Result Print');
-        // });
+            $message->from('info@chitano.info','C Result Print');
+        });
 
         // // Mail to admin
-        // Mail::send('mailadmin', $card, function($message) use ($card) {
-        //     $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
-        //        ('New order');
-        //     $message->cc(['chitanokumar@gmail.com']);           
-        //     $message->from('info@chitano.info','C Result Print');
-        // });
+        Mail::send('mailadmin', $card, function($message) use ($card) {
+            $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
+               ('New order');
+            $message->cc(['chitanokumar@gmail.com']);           
+            $message->from('info@chitano.info','C Result Print');
+        });
 
         // $to = Auth::user()->email;
         // $subject = "Order Summary";

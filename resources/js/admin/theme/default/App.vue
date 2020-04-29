@@ -33,8 +33,7 @@
             <v-btn text to="/backend/companies" style="color:#ffffff;">Companies</v-btn>
             <v-btn text to="/backend/branches" style="color:#ffffff;">Branches</v-btn>
             <v-btn text to="/backend/company" style="color:#ffffff;">Setting</v-btn>
-            <v-btn text to="/backend/packages" style="color:#ffffff;">Packages</v-btn>            
-            <v-btn text to="/backend/vieworders" style="color:#ffffff;">View Orders</v-btn>            
+            <v-btn text to="/backend/packages" style="color:#ffffff;">Packages</v-btn> 
             <v-btn text to="/backend/pastorders" style="color:#ffffff;">Past Orders</v-btn>            
         </v-toolbar-items>
         <div class="logoutposition" v-if="auth">
@@ -94,8 +93,7 @@ export default {
                     { title: 'Branches', icon: 'home_work', action:this.branches},
                     { title: 'Packages', icon: 'pages', action:this.packages},
                     { title: 'Users', icon: 'people', action:this.users },
-                    { title: 'Settings', icon: 'settings_applications', action:this.settings},
-                    { title: 'ViewOrders', icon: 'settings_applications', action:this.vieworders},
+                    { title: 'Settings', icon: 'settings_applications', action:this.settings},                    
                     { title: 'PastOrders', icon: 'settings_applications', action:this.pastorders},
                     { title: 'Logout', icon: 'power_settings_new', action:this.logout}
                 ],

@@ -6,6 +6,11 @@
           <v-col cols="12">
             <v-card>
               <v-card-title>Website Setting</v-card-title>
+               <v-row>
+                    <v-col>
+                            <v-btn style="float:right;margin-right:20px;" @click.prevent="updateSettings" color="#ff0000"> <span style="color:white;">Save</span></v-btn>
+                    </v-col>
+                </v-row>
               <v-divider></v-divider>
               <v-col>
                 <v-form enctype="multipart/form-data" id="settingFrm">
@@ -99,11 +104,7 @@
                     ></v-img>
                         </v-col>
                     </v-row>
-                    <v-row>
-                        <v-col>
-                                <v-btn @click.prevent="updateSettings" color="primary" tile>Save</v-btn>
-                        </v-col>
-                    </v-row>
+                   
                 </v-form>
               </v-col>
             </v-card>

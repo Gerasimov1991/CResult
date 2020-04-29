@@ -10,7 +10,7 @@
         </v-toolbar-items>
         <v-toolbar-items v-else>
             <v-btn v-for="branch in company.branches" :key="branch.id" text class="white--text" :class="activeClass == branch.id?'custom-active-class':''" :to="'/'+branch.id+'/orders'">{{branch.short_name}}</v-btn>
-            <v-btn text class="white--text" @click="onLogout()">Logoutaaa</v-btn>
+            <v-btn text class="white--text" @click="onLogout()">Logout</v-btn>
         </v-toolbar-items>
     </v-system-bar>
     <v-app-bar app height="100" style="" v-if="$vuetify.breakpoint.mdAndUp" :color="auth?company.header_background_color:'#000000'">

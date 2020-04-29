@@ -45,10 +45,7 @@
                         </v-col>
                         <v-col md="2" v-if="cardImage">
                             <v-text-field label="Right" v-model="cardImageRight" type="number"></v-text-field>
-                        </v-col>
-                        <!-- <v-col md="2">
-                            <v-text-field type="number" v-model="footerFontSize" label="Footer font size"></v-text-field>
-                        </v-col> -->
+                        </v-col>                        
                 <v-col class="py-0" :md="cardImage?4:12">
                     <v-select
                     :items="packages"
@@ -67,7 +64,7 @@
                 </v-col>
                 </v-row>
                 <v-col>
-                    <v-btn color="primary" tile @click.prevent="saveCard">Save Card</v-btn>
+                    <v-btn color="#ff0000" tile @click.prevent="saveCard"><span style="color:white;">Save Card</span> </v-btn>
                 </v-col>
                 </v-form>
                 </v-col>
@@ -92,7 +89,7 @@
                             <v-img
                             class="white--text"
                             height="160px"
-                            :src="preset"
+                            :src="'/company/images/vcb.png'"
                             >
                             <div class="fill-height pa-4">
                                 <p :style="'margin:0px;margin-top:'+marginTop+'px;padding:0px;font-size:'+nameFontSize+'px;font-weight:'+nameFontWeight+';color:'+mainColor+';'">{{getName}}</p>
@@ -114,11 +111,32 @@
                             <p class="pl-4 pt-2" :style="'font-size:'+footerFontSize+'px;'"><span :style="'color:'+mainColor+';'">A:</span> 242 Leach Hwy, Myaree WA 6154 <span :style="'color:'+mainColor+';'">| W:</span> summithomes.com.au</p>
                         </v-card>
                     </v-col>
+                    <v-row>
+                       <v-col>
+
+                            <v-card
+                                class="mx-auto mb-4"
+                                width="340"
+                                height="208"
+                                tile
+                                color="#D0D3D4"
+                                elevation="2"
+                            >
+                            <v-img
+                                class="white--text"
+                                height="208"
+                                
+                                :src="preset"
+                                ></v-img>
+
+                                </v-card>                               
+                       </v-col>
+                   </v-row>
 
                 </v-row>
                 <v-row>
                     <v-col>                           
-                        <v-btn style="width:100%;" @click="approveOrder" color="primary" tile>Approve</v-btn>
+                        <v-btn style="width:100%;" @click="approveOrder" color="#ff0000"><span style="color:white">Approve</span></v-btn>
                     </v-col>
                 </v-row>
             </v-card>
