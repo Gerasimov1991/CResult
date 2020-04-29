@@ -2,20 +2,23 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{-- <link rel="stylesheet" href="{{ asset('./company/css/pdffonts.css') }}"> --}}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 <style>
-  /* @font-face {
-      font-family: GilroyB;
-      src: url(./fonts/Gilroy-Bold.otf);
-  }
-  @font-face {
-      font-family: GilroyE;
-      src: url(./fonts/Gilroy-Extrabold.otf);
-  }
-  @font-face {
-      font-family: GilroyR;
-      src: url(./fonts/Gilroy-Regular.otf);
-  } */
+ @font-face {
+    font-family: "GilroyB";
+    src: url({{ storage_path('fonts\Roboto-Bold.ttf') }}) format("truetype");    
+}
+@font-face {
+    font-family: "GilroyE";    
+    src: url({{ storage_path('fonts\Gilroy-Extrabold.otf') }}) format("truetype");    
+}
+@font-face {
+    font-family: "GilroyR";    
+    src: url({{ storage_path('fonts\Gilroy-Regular.otf') }}) format("truetype");    
+}
   .card {
+    font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)!important;
   transition: 0.3s;
   width: 378px;
@@ -53,7 +56,7 @@
     @endif
     <div class="container">    
       <h2 style="margin:0px;"><b style="color:red;text-transform:uppercase;font-family:GilroyB;font-size: 14pt;line-height:19.8pt;letter-spacing: 1.5px;">{!! $name !!}</b></h2>    
-      <p style="color:#ffffff;text-transform:uppercase;font-size:20px;font-size: 10pt;font-family:GilroyB;line-height:17pt;margin:0px">{!! $title !!}</p>
+      <p style="color:#ffffff;text-transform:uppercase;font-size:20px;font-size: 10pt;font-family:GilroyB;line-height:17pt;margin:0px;font-weight:600;">{!! $title !!}</p>
 
       <p style="color:white;margin-top:45px;font-family:GilroyR;margin-bottom: 0px;font-size: 10pt;line-height:11pt;"><span style="color:red;font-size: 7.4pt;">M:</span> {!! $mobile !!}</p>
       <p style="color:white;margin:0px;font-size: 10pt;font-family:GilroyR;line-height:11pt;"><span style="color:red;font-size: 7.4pt;">D:</span> {!! $direct_dial !!}</p>

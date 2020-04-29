@@ -82,7 +82,7 @@
                                 <p class="px-9 py-8 subtitle-2"><span class="red--text">A:</span> 242 Leach Hwy, Myaree WA 6154 <span class="red--text">| W:</span> summithomes.com.au</p>
 
                             </v-card>
-                            <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn>
+                            <!-- <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn> -->
                             <v-btn @click="approveOrder" color="primary" tile>Approve</v-btn>
                        </v-col>
                    </v-row>

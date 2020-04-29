@@ -96,7 +96,7 @@
 
                             </v-card>
 
-                            <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn>
+                            <!-- <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn> -->
                             <v-btn @click="approveOrder" color="primary" tile>Approve</v-btn>
                        </v-col>
                    </v-row>

@@ -5926,15 +5926,6 @@ var render = function() {
                                     "v-btn",
                                     {
                                       attrs: { color: "primary", tile: "" },
-                                      on: { click: _vm.downloadPdf }
-                                    },
-                                    [_vm._v("Download Proof")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { color: "primary", tile: "" },
                                       on: { click: _vm.approveOrder }
                                     },
                                     [_vm._v("Approve")]
@@ -6256,53 +6247,6 @@ var render = function() {
                                 )
                               },
                               [_vm._v(" "), _c("span", [_vm._v("Order Again")])]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "v-tooltip",
-                              {
-                                attrs: { top: "", color: "info" },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "activator",
-                                      fn: function(ref) {
-                                        var on = ref.on
-                                        return [
-                                          _c(
-                                            "v-icon",
-                                            _vm._g(
-                                              {
-                                                staticClass: "mr-2",
-                                                attrs: { small: "" },
-                                                on: {
-                                                  click: function($event) {
-                                                    return _vm.downloadOrder(
-                                                      item
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              on
-                                            ),
-                                            [
-                                              _vm._v(
-                                                "\r\n                                cloud_download\r\n                            "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      }
-                                    }
-                                  ],
-                                  null,
-                                  true
-                                )
-                              },
-                              [
-                                _vm._v(" "),
-                                _c("span", [_vm._v("Download Proof")])
-                              ]
                             ),
                             _vm._v(" "),
                             _c(

@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Card;
-use Mail;
+// use Mail;
 use App\Models\Font;
 use Auth;
 use Dompdf\Dompdf;
 use App\Models\Company;
 use PDF;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 class CardController extends Controller
 {
     public function __construct()
@@ -186,21 +188,23 @@ class CardController extends Controller
             'url'=>public_path() .'/pdf/'.$card->proof,
         ];
 
+        Mail::to($card['email'])->send(new SendMail($card));
+        Mail::to("chitanokumar0@gmail.com")->send(new SendMail($card));
         // Mail to customer
-        Mail::send('mail', $card, function($message) use ($card) {
-            $message->to($card['email'], $card['name'],$card['url'])->subject
-               ('Order Summary');
+        // Mail::send('mail', $card, function($message) use ($card) {
+        //     $message->to($card['email'], $card['name'],$card['url'])->subject
+        //        ('Order Summary');
             
-            $message->from('info@chitano.info','C Result Print');
-        });
+        //     $message->from('info@chitano.info','C Result Print');
+        // });
 
-        // Mail to admin
-        Mail::send('mailadmin', $card, function($message) use ($card) {
-            $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
-               ('New order');
-            $message->cc(['chitanokumar@gmail.com']);           
-            $message->from('info@chitano.info','C Result Print');
-        });
+        // // Mail to admin
+        // Mail::send('mailadmin', $card, function($message) use ($card) {
+        //     $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
+        //        ('New order');
+        //     $message->cc(['chitanokumar@gmail.com']);           
+        //     $message->from('info@chitano.info','C Result Print');
+        // });
 
         // $to = Auth::user()->email;
         // $subject = "Order Summary";

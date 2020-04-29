@@ -41,7 +41,7 @@
                         </template>
                     <span>Order Again</span>
                     </v-tooltip>
-                    <v-tooltip top color="info">
+                    <!-- <v-tooltip top color="info">
                         <template #activator="{ on }">
                             <v-icon
                                 small
@@ -53,7 +53,7 @@
                             </v-icon>
                         </template>
                     <span>Download Proof</span>
-                    </v-tooltip>
+                    </v-tooltip> -->
                     <v-tooltip top color="warning">
                         <template #activator="{ on }">
                             <v-icon
