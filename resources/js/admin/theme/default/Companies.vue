@@ -183,7 +183,7 @@
       right
       @click="dialog = !dialog"
     >
-      <v-icon>mdi-plus</v-icon>asdfasdfasdfasdf
+      <v-icon>mdi-plus</v-icon>
     </v-btn>
 </v-container>
 </template>

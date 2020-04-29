@@ -53,12 +53,15 @@
       <v-col v-if="auth"
         class="text-center"
         cols="12" >
-        <span :style="'color:'+company.footer_text_color">{{ company.footer_text }}</span>
+        <!-- <span :style="'color:'+company.footer_text_color">{{ company.footer_text }}</span> -->
+        <a href="https://clikdigital.com.au/" style="text-decoration:none;color:white;">Built & Powered by Clik Digital</a>
+        
       </v-col>
       <v-col v-else
         class="text-center"
         cols="12" style="color:#ffffff;">
-        {{ new Date().getFullYear() }} — <strong>C Results Business Card</strong>
+        <!-- {{ new Date().getFullYear() }} — <strong>C Results Business Card</strong> -->
+        <a href="https://clikdigital.com.au/" style="text-decoration:none;color:white;">Built & Powered by Clik Digital</a>
       </v-col>
     </v-footer>
     <v-btn v-if="auth"

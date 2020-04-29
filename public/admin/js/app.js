@@ -2003,6 +2003,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3875,9 +3876,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     editItem: function editItem(item) {
+      if (item < 0) {
+        this.dialogTitle = 'Add User';
+      } else {
+        this.dialogTitle = 'Edit User';
+      }
+
       this.editedIndex = this.users.indexOf(item);
       this.editedItem = Object.assign(this.editedItem, item);
-      this.dialogTitle = 'Edit User';
       this.selectedItem = this.editedItem.company_id;
       this.dialog = true;
     },
@@ -5561,7 +5567,7 @@ var render = function() {
                           staticStyle: { color: "#ffffff" },
                           attrs: { text: "", to: "/backend/company" }
                         },
-                        [_vm._v("Setting")]
+                        [_vm._v("Settings")]
                       ),
                       _vm._v(" "),
                       _c(
@@ -5695,8 +5701,14 @@ var render = function() {
         { staticClass: "font-weight-medium", attrs: { absolute: "" } },
         [
           _c("v-col", { staticClass: "text-center", attrs: { cols: "12" } }, [
-            _vm._v("\r\n        " + _vm._s(new Date().getFullYear()) + " — "),
-            _c("strong", [_vm._v("C Results Business Card")])
+            _c(
+              "a",
+              {
+                staticStyle: { "text-decoration": "none", color: "black" },
+                attrs: { href: "https://clikdigital.com.au/" }
+              },
+              [_vm._v("Built & Powered by Clik Digital")]
+            )
           ])
         ],
         1
@@ -6734,10 +6746,7 @@ var render = function() {
                 }
               }
             },
-            [
-              _c("v-icon", [_vm._v("mdi-plus")]),
-              _vm._v("asdfasdfasdfasdf\r\n    ")
-            ],
+            [_c("v-icon", [_vm._v("mdi-plus")])],
             1
           )
         : _vm._e()
@@ -8083,7 +8092,14 @@ var render = function() {
                     [
                       _c(
                         "v-btn",
-                        { attrs: { text: "", to: "/backend/user/add-new" } },
+                        {
+                          attrs: { text: "" },
+                          on: {
+                            click: function($event) {
+                              return _vm.editItem(-1)
+                            }
+                          }
+                        },
                         [
                           _c("i", { staticClass: "fas fa-user-plus" }),
                           _vm._v("Add Users")

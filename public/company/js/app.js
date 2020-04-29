@@ -2318,6 +2318,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5484,9 +5487,15 @@ var render = function() {
                 { staticClass: "text-center", attrs: { cols: "12" } },
                 [
                   _c(
-                    "span",
-                    { style: "color:" + _vm.company.footer_text_color },
-                    [_vm._v(_vm._s(_vm.company.footer_text))]
+                    "a",
+                    {
+                      staticStyle: {
+                        "text-decoration": "none",
+                        color: "white"
+                      },
+                      attrs: { href: "https://clikdigital.com.au/" }
+                    },
+                    [_vm._v("Built & Powered by Clik Digital")]
                   )
                 ]
               )
@@ -5498,10 +5507,17 @@ var render = function() {
                   attrs: { cols: "12" }
                 },
                 [
-                  _vm._v(
-                    "\r\n        " + _vm._s(new Date().getFullYear()) + " — "
-                  ),
-                  _c("strong", [_vm._v("C Results Business Card")])
+                  _c(
+                    "a",
+                    {
+                      staticStyle: {
+                        "text-decoration": "none",
+                        color: "white"
+                      },
+                      attrs: { href: "https://clikdigital.com.au/" }
+                    },
+                    [_vm._v("Built & Powered by Clik Digital")]
+                  )
                 ]
               )
         ],

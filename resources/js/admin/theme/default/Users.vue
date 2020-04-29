@@ -6,7 +6,7 @@
         <v-col md="10" offset-md="1">
             <v-card>
                 <div style="margin-top: 10px;text-align: right;">
-                    <v-btn text to="/backend/user/add-new"><i class="fas fa-user-plus"></i>Add Users</v-btn>
+                    <v-btn text @click="editItem(-1)"><i class="fas fa-user-plus"></i>Add Users</v-btn>
                 </div>
                 <v-card-title>
                     Users
@@ -209,10 +209,18 @@ export default {
         }
     },
     methods:{
-        editItem (item) {
+        editItem (item) {             
+            if(item < 0)
+            {
+                this.dialogTitle = 'Add User'
+            }
+            else
+            {
+                this.dialogTitle = 'Edit User'
+            }
             this.editedIndex = this.users.indexOf(item)
             this.editedItem = Object.assign(this.editedItem, item)
-            this.dialogTitle= 'Edit User'
+            
             this.selectedItem = this.editedItem.company_id
             this.dialog = true
         },

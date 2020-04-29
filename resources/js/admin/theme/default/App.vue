@@ -32,7 +32,7 @@
             <v-btn text to="/backend/users" style="color:#ffffff;">Users</v-btn>           
             <v-btn text to="/backend/companies" style="color:#ffffff;">Companies</v-btn>
             <v-btn text to="/backend/branches" style="color:#ffffff;">Branches</v-btn>
-            <v-btn text to="/backend/company" style="color:#ffffff;">Setting</v-btn>
+            <v-btn text to="/backend/company" style="color:#ffffff;">Settings</v-btn>
             <v-btn text to="/backend/packages" style="color:#ffffff;">Packages</v-btn> 
             <v-btn text to="/backend/pastorders" style="color:#ffffff;">Orders</v-btn>            
         </v-toolbar-items>
@@ -71,7 +71,8 @@
         class="text-center"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>C Results Business Card</strong>
+        <!-- {{ new Date().getFullYear() }} — <strong>C Results Business Card</strong> -->
+        <a href="https://clikdigital.com.au/" style="text-decoration:none;color:black;">Built & Powered by Clik Digital</a>
       </v-col>
     </v-footer>
 </v-app>
