@@ -6798,7 +6798,7 @@ var render = function() {
                       _c(
                         "v-card",
                         [
-                          _c("v-card-title", [_vm._v("Website Setting")]),
+                          _c("v-card-title", [_vm._v("Website Settings")]),
                           _vm._v(" "),
                           _c(
                             "v-row",

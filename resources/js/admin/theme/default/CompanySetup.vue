@@ -5,7 +5,7 @@
         <v-row>
           <v-col cols="12">
             <v-card>
-              <v-card-title>Website Setting</v-card-title>
+              <v-card-title>Website Settings</v-card-title>
                <v-row>
                     <v-col>
                             <v-btn style="float:right;margin-right:20px;" @click.prevent="updateSettings" color="#ff0000"> <span style="color:white;">Save</span></v-btn>
