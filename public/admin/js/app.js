@@ -2035,7 +2035,7 @@ __webpack_require__.r(__webpack_exports__);
         icon: 'settings_applications',
         action: this.settings
       }, {
-        title: 'PastOrders',
+        title: 'Orders',
         icon: 'settings_applications',
         action: this.pastorders
       }, {
@@ -5579,7 +5579,7 @@ var render = function() {
                           staticStyle: { color: "#ffffff" },
                           attrs: { text: "", to: "/backend/pastorders" }
                         },
-                        [_vm._v("Past Orders")]
+                        [_vm._v("Orders")]
                       )
                     ],
                     1
