@@ -66,6 +66,7 @@ Route::group([
 
     Route::get('get-orders', 'CardController@getOrders');
     Route::get('get-past-orders', 'CardController@getPastOrders');
+    Route::post('delete-order', 'CardController@deleteOrder');
     Route::get('packages', 'Admin\PackageController@getPackages');
     Route::post('update-package', 'Admin\PackageController@updatePackage');
     Route::post('delete-package', 'Admin\PackageController@deletePackage');

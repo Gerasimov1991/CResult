@@ -3561,18 +3561,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -7853,7 +7841,7 @@ var render = function() {
                   _c(
                     "v-card-title",
                     [
-                      _vm._v("\r\n        Past Orders\r\n        "),
+                      _vm._v("\r\n        Orders\r\n        "),
                       _c("div", { staticClass: "flex-grow-1" }),
                       _vm._v(" "),
                       _c("v-text-field", {
@@ -7889,48 +7877,6 @@ var render = function() {
                         fn: function(ref) {
                           var item = ref.item
                           return [
-                            _c(
-                              "v-tooltip",
-                              {
-                                attrs: { top: "", color: "success" },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "activator",
-                                      fn: function(ref) {
-                                        var on = ref.on
-                                        return [
-                                          _c(
-                                            "v-icon",
-                                            _vm._g(
-                                              {
-                                                staticClass: "mr-2",
-                                                attrs: { small: "" },
-                                                on: {
-                                                  click: function($event) {
-                                                    return _vm.orderNow(item)
-                                                  }
-                                                }
-                                              },
-                                              on
-                                            ),
-                                            [
-                                              _vm._v(
-                                                "\r\n                                done\r\n                            "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      }
-                                    }
-                                  ],
-                                  null,
-                                  true
-                                )
-                              },
-                              [_vm._v(" "), _c("span", [_vm._v("Order Again")])]
-                            ),
-                            _vm._v(" "),
                             _c(
                               "v-tooltip",
                               {
@@ -63863,6 +63809,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
         setTimeout(function () {
           state.success = false;
         }, 3000);
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    deleteOrder: function deleteOrder(_ref22, formData) {
+      var commit = _ref22.commit,
+          dispatch = _ref22.dispatch,
+          state = _ref22.state;
+      _axios_auth__WEBPACK_IMPORTED_MODULE_2__["default"].post('delete-order?token=' + state.token, formData).then(function (response) {
+        commit('successMessage', 'Order has been deleted.');
       })["catch"](function (error) {
         console.log(error.response);
       });

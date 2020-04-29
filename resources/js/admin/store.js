@@ -359,6 +359,15 @@ export default new Vuex.Store({
                     console.log(error.response)
                 })
         },
+        deleteOrder({commit,dispatch,state},formData){
+            axios.post('delete-order?token='+state.token,formData)
+                .then(response=>{
+                    commit('successMessage', 'Order has been deleted.')
+                })
+                .catch(error=>{
+                    console.log(error.response)
+                })
+        }
     }
 
 })

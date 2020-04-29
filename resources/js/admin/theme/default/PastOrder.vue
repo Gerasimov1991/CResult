@@ -10,7 +10,7 @@
             </v-alert>
             <v-card>
             <v-card-title>
-        Past Orders
+        Orders
         <div class="flex-grow-1"></div>
         <v-text-field
             v-model="search"
@@ -28,19 +28,7 @@
             show-select
             :search="search">
                 <template v-slot:item.action="{ item }">
-                    <v-tooltip top color="success">
-                        <template #activator="{ on }">
-                            <v-icon
-                                small
-                                class="mr-2"
-                                v-on="on"
-                                @click="orderNow(item)"
-                            >
-                                done
-                            </v-icon>
-                        </template>
-                    <span>Order Again</span>
-                    </v-tooltip>
+                    
                     <v-tooltip top color="info">
                         <template #activator="{ on }">
                             <v-icon
