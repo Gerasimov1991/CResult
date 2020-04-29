@@ -260,20 +260,20 @@ class CardController extends Controller
         // Mail::to($card['email'])->send(new SendMail($card));
         // Mail::to("chitanokumar0@gmail.com")->send(new SendMail($card));
         // Mail to customer
-        Mail::send('mail', $card, function($message) use ($card) {
-            $message->to($card['email'], $card['name'],$card['url'])->subject
-               ('Order Summary');
+        // Mail::send('mail', $card, function($message) use ($card) {
+        //     $message->to($card['email'], $card['name'],$card['url'])->subject
+        //        ('Order Summary');
             
-            $message->from('info@chitano.info','C Result Print');
-        });
+        //     $message->from('info@chitano.info','C Result Print');
+        // });
 
         // // Mail to admin
-        Mail::send('mailadmin', $card, function($message) use ($card) {
-            $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
-               ('New order');
-            $message->cc(['chitanokumar@gmail.com']);           
-            $message->from('info@chitano.info','C Result Print');
-        });
+        // Mail::send('mailadmin', $card, function($message) use ($card) {
+        //     $message->to('chitanokumar0@gmail.com', 'Admin',$card['url'])->subject
+        //        ('New order');
+        //     $message->cc(['chitanokumar@gmail.com']);           
+        //     $message->from('info@chitano.info','C Result Print');
+        // });
 
         // $to = Auth::user()->email;
         // $subject = "Order Summary";
@@ -293,7 +293,7 @@ class CardController extends Controller
 
         return response()->json([
             'status'=>'Success',
-            'message'=>'Thanks, your order has been sent'
+            'message'=>'Thanks, your order has been placed'
         ]);
     }
 
