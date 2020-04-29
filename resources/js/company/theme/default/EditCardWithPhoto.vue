@@ -50,7 +50,7 @@
                    </v-col>
 
                    <v-col>
-                       <v-btn color="primary" tile @click.prevent="saveCard">Save Card</v-btn>
+                       <v-btn color="#ff0000" tile @click.prevent="saveCard"><span style="color:white;">Save Card</span></v-btn>
                    </v-col>
                    </v-form>
                </v-card>
@@ -72,7 +72,7 @@
                                 <v-img
                                 class="white--text"
                                 height="325px"
-                                :src="preset"
+                                :src="'/company/images/vcb.png'"
                                 >
                                 <div class="fill-height" :class="$vuetify.breakpoint.mdAndUp? 'pa-9':'pa-4'">
                                     <p class="red--text mb-0 font-weight-medium" :class="$vuetify.breakpoint.mdAndUp? 'display-1':'body-1'">{{card.name}}</p>
@@ -95,10 +95,35 @@
                                 <p class="subtitle-2" :class="$vuetify.breakpoint.mdAndUp? 'pa-9':'pa-4'"><span class="red--text">A:</span> 242 Leach Hwy, Myaree WA 6154 <span class="red--text">| W:</span> summithomes.com.au</p>
 
                             </v-card>
-
-                            <!-- <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn> -->
-                            <v-btn @click="approveOrder" color="primary" tile>Approve</v-btn>
+                           
                        </v-col>
+                   </v-row>
+                    <v-row>
+                       <v-col>
+
+                            <v-card
+                                class="mx-auto mb-4"
+                                max-width="100%"
+                                height="auto"
+                                tile
+                                color="#D0D3D4"
+                                elevation="2"
+                            >
+                            <v-img
+                                class="white--text"
+                                max-width="100%"
+                                height="auto"
+                                
+                                :src="preset"
+                                ></v-img>
+
+                                </v-card>                               
+                       </v-col>
+                   </v-row>
+                   <v-row>
+                        <v-col>
+                           <v-btn @click="approveOrder" color="#ff0000" tile> <span style="color:white">Approve</span></v-btn>
+                        </v-col>
                    </v-row>
                </v-card>
             </v-col>

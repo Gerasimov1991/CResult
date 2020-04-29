@@ -67,7 +67,7 @@
                                 <v-img
                                 class="white--text"
                                 height="325px"
-                                :src="SHPreset"
+                                :src="'/company/images/vcb.png'"
                                 >
                                 <div class="pa-9 fill-height">
                                     <p class="display-1 red--text mb-0 font-weight-medium">{{getName}}</p>
@@ -81,11 +81,32 @@
                                 </v-img>
                                 <p class="px-9 py-8 subtitle-2"><span class="red--text">A:</span> 242 Leach Hwy, Myaree WA 6154 <span class="red--text">| W:</span> summithomes.com.au</p>
 
-                            </v-card>
-                            <!-- <v-btn @click="downloadPdf" color="primary" tile>Download Proof</v-btn> -->
-                            <v-btn @click="approveOrder" color="primary" tile>Approve</v-btn>
+                            </v-card>                            
                        </v-col>
                    </v-row>
+                   <v-row>
+                       <v-col>
+
+                            <v-card
+                                class="mx-auto mb-4"
+                                width="340"
+                                height="208"
+                                tile
+                                color="#D0D3D4"
+                                elevation="2"
+                            >
+                            <v-img
+                                class="white--text"
+                                height="208"
+                                
+                                :src="preset"
+                                ></v-img>
+
+                                </v-card>                               
+                       </v-col>
+                       <v-btn @click="approveOrder" color="primary" tile>Approve</v-btn>
+                   </v-row>
+
                </v-card>
             </v-col>
                </v-row>

@@ -34,7 +34,7 @@
                     @input="$v.password.$touch()"
                     ></v-text-field>
 
-                  <v-btn @click.prevent="addUser">Save</v-btn>
+                  <v-btn :style="'color:#ff0000;'" color="#ff0000" @click.prevent="addUser"><span style="color:white;">Save</span></v-btn>
                 </v-form>
               </v-col>
             </v-card>

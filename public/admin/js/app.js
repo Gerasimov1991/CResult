@@ -7448,6 +7448,8 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
+                              style: "color:#ff0000;",
+                              attrs: { color: "#ff0000" },
                               on: {
                                 click: function($event) {
                                   $event.preventDefault()
@@ -7455,7 +7457,11 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("Save")]
+                            [
+                              _c("span", { staticStyle: { color: "white" } }, [
+                                _vm._v("Save")
+                              ])
+                            ]
                           )
                         ],
                         1

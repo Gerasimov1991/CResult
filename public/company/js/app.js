@@ -2485,6 +2485,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5763,7 +5788,7 @@ var render = function() {
                                   _c(
                                     "v-btn",
                                     {
-                                      attrs: { color: "primary", tile: "" },
+                                      attrs: { color: "#ff0000", tile: "" },
                                       on: {
                                         click: function($event) {
                                           $event.preventDefault()
@@ -5771,7 +5796,13 @@ var render = function() {
                                         }
                                       }
                                     },
-                                    [_vm._v("Save Card")]
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticStyle: { color: "white" } },
+                                        [_vm._v("Save Card")]
+                                      )
+                                    ]
                                   )
                                 ],
                                 1
@@ -5828,7 +5859,7 @@ var render = function() {
                                           staticClass: "white--text",
                                           attrs: {
                                             height: "325px",
-                                            src: _vm.preset
+                                            src: "/company/images/vcb.png"
                                           }
                                         },
                                         [
@@ -5986,15 +6017,70 @@ var render = function() {
                                       )
                                     ],
                                     1
-                                  ),
-                                  _vm._v(" "),
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-auto mb-4",
+                                      attrs: {
+                                        "max-width": "100%",
+                                        height: "auto",
+                                        tile: "",
+                                        color: "#D0D3D4",
+                                        elevation: "2"
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        staticClass: "white--text",
+                                        attrs: {
+                                          "max-width": "100%",
+                                          height: "auto",
+                                          src: _vm.preset
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                [
                                   _c(
                                     "v-btn",
                                     {
-                                      attrs: { color: "primary", tile: "" },
+                                      attrs: { color: "#ff0000", tile: "" },
                                       on: { click: _vm.approveOrder }
                                     },
-                                    [_vm._v("Approve")]
+                                    [
+                                      _c(
+                                        "span",
+                                        { staticStyle: { color: "white" } },
+                                        [_vm._v("Approve")]
+                                      )
+                                    ]
                                   )
                                 ],
                                 1
